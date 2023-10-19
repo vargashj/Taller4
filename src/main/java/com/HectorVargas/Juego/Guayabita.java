@@ -16,11 +16,11 @@ public class Guayabita {
 
             int opcion = JOptionPane.showOptionDialog(
                     null,
-                    "Bienvenidx al juego de la guayabita\n     ¿Que quieres hacer?",
+                    "Bienvenidx al juego de la guayabita" + System.lineSeparator() + "¿Que quieres hacer?",
                     "Guayabita",
                     JOptionPane.DEFAULT_OPTION,
-                    JOptionPane.PLAIN_MESSAGE,icon
-                    ,
+                    JOptionPane.PLAIN_MESSAGE,
+                    icon,
                     new String[] {"Jugar", "Ver instrucciones"},
                     null
             );
@@ -48,7 +48,7 @@ public class Guayabita {
                     com.HectorVargas.Juego.Jugador jugador = jugadores[jugadorActual];
 
                     // Mostrar ventana de lanzar el dado al jugador actual
-                    int resultadoDado = JOptionPane.showOptionDialog(null, "Jugador: " + jugador.getNombre() + "\nPote actual: " + pote + "\n¿Deseas lanzar el dado?", "Guayabita - Lanzar dado", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,icon, new String[] {"Sí", "No"}, null);
+                    int resultadoDado = JOptionPane.showOptionDialog(null, "Jugador: " + jugador.getNombre() + "\nPote actual: " + pote + "¿Deseas lanzar el dado?", "Guayabita - Lanzar dado", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,icon, new String[] {"Si", "No"}, null);
                     if (resultadoDado == 1) {
                         // El jugador no quiere lanzar el dado, juego terminado
                         break;
